@@ -7,6 +7,7 @@ import { S03CeyoScan } from "@/components/slides/S03CeyoScan";
 import { S04G2 } from "@/components/slides/S04G2";
 import { S05Reddit } from "@/components/slides/S05Reddit";
 import { S06Content } from "@/components/slides/S06Content";
+import { S07Lifecycle } from "@/components/slides/S07Lifecycle";
 import { S07ProgSEO } from "@/components/slides/S07ProgSEO";
 import { S08PaidAds } from "@/components/slides/S08PaidAds";
 import { S09PR } from "@/components/slides/S09PR";
@@ -31,6 +32,7 @@ export default function Page() {
         <S04G2 />
         <S05Reddit />
         <S06Content />
+        <S07Lifecycle />
         <S07ProgSEO />
         <S08PaidAds />
         <S09PR />

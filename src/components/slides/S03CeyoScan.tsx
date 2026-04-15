@@ -70,7 +70,7 @@ const ADDITIONAL_TOOLS = [
 
 export function S03CeyoScan() {
   return (
-    <SectionShell id="ceyo-scan" eyebrow="The top of funnel" index={3} total={12}>
+    <SectionShell id="ceyo-scan" eyebrow="The top of funnel" index={3} total={13}>
       <AuroraBlob className="top-0 left-[-160px]" size={540} />
 
       <div className="mb-6">

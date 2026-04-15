@@ -48,7 +48,7 @@ const TRACKS = [
 
 export function S06Content() {
   return (
-    <SectionShell id="content" eyebrow="The voice engine" index={6} total={12}>
+    <SectionShell id="content" eyebrow="The voice engine" index={6} total={13}>
       <AuroraBlob className="top-[-120px] right-[-120px]" size={520} color="rgba(99,102,241,0.14)" />
 
       <div className="mb-6">

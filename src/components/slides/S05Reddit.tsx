@@ -21,7 +21,7 @@ const LOOP = [
 
 export function S05Reddit() {
   return (
-    <SectionShell id="reddit" eyebrow="The citation channel" index={5} total={12}>
+    <SectionShell id="reddit" eyebrow="The citation channel" index={5} total={13}>
       <AuroraBlob className="bottom-[-100px] right-[-160px]" size={560} color="rgba(99,102,241,0.14)" />
 
       <div className="mb-6">

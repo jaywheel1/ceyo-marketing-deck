@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 const SECTIONS = [
   { id: "cover", label: "Cover" },
   { id: "invisible", label: "Site fix" },
-  { id: "ceyo-scan", label: "Free tool" },
+  { id: "ceyo-scan", label: "Free tools" },
   { id: "g2", label: "G2" },
   { id: "reddit", label: "Reddit" },
   { id: "content", label: "Content" },
+  { id: "lifecycle", label: "Lifecycle" },
   { id: "prog-seo", label: "SEO pages" },
   { id: "paid-ads", label: "Paid ads" },
   { id: "pr", label: "PR" },

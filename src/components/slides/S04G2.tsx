@@ -71,7 +71,7 @@ function bold(text: string) {
 
 export function S04G2() {
   return (
-    <SectionShell id="g2" eyebrow="The review play" index={4} total={12}>
+    <SectionShell id="g2" eyebrow="The review play" index={4} total={13}>
       <AuroraBlob className="top-20 right-[-200px]" size={500} />
 
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">

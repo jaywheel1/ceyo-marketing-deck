@@ -141,7 +141,7 @@ const PHASES = [
 
 export function S11Plan() {
   return (
-    <SectionShell id="plan" eyebrow="The first 90 days" index={11} total={12}>
+    <SectionShell id="plan" eyebrow="The first 90 days" index={12} total={13}>
       <AuroraBlob className="top-[-80px] left-[-100px]" size={500} />
 
       <div className="mb-6">

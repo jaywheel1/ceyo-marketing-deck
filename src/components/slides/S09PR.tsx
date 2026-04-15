@@ -28,7 +28,7 @@ const ANALYSTS = [
 
 export function S09PR() {
   return (
-    <SectionShell id="pr" eyebrow="Borrowed authority" index={9} total={12}>
+    <SectionShell id="pr" eyebrow="Borrowed authority" index={10} total={13}>
       <AuroraBlob className="bottom-[-100px] left-[-140px]" size={520} color="rgba(99,102,241,0.12)" />
 
       <div className="mb-6">

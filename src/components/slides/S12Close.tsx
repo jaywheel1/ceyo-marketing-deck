@@ -8,7 +8,7 @@ import { Explainer } from "../primitives/Explainer";
 const ALLOC = [
   {
     band: "Under $5K / month",
-    body: "Mostly tooling and AI compute (agent layer, content stack, citation tracking, Remotion's render service) — plus small ad-testing budgets used the same way as retargeting: only on warm audiences. Boost Tom + Maxim's top organic posts to people who already engaged. Run small Meta retargeting on site visitors. The point isn't reach — it's figuring out which creative wins before spending more.",
+    body: "Almost all of this goes into ad-testing budgets used like retargeting — boosting Tom + Maxim's top organic posts to people who already engaged, plus tiny Meta retargeting on site visitors. The point isn't reach; it's figuring out which creative wins before spending more. Plus small one-offs like the $25 G2 review incentive. Tooling and Remotion are free.",
   },
   {
     band: "$5K – $20K / month",
@@ -31,7 +31,7 @@ const OWNED = [
 
 export function S12Close() {
   return (
-    <SectionShell id="close" eyebrow="Investment + ownership" index={12} total={12}>
+    <SectionShell id="close" eyebrow="Investment + ownership" index={13} total={13}>
       <AuroraBlob className="top-[-120px] right-[-140px]" size={640} color="rgba(79,70,229,0.2)" duration={20} />
       <AuroraBlob className="bottom-[-180px] left-[-80px]" size={520} color="rgba(99,102,241,0.12)" duration={24} />
 
@@ -110,7 +110,7 @@ export function S12Close() {
           <div className="mt-8 flex items-center gap-4">
             <div className="font-mono text-xs text-ceyo-muted">— Jay</div>
             <div className="h-8 w-px bg-ceyo-border" />
-            <div className="font-mono text-xs text-ceyo-accent3 tabular">12 / 12</div>
+            <div className="font-mono text-xs text-ceyo-accent3 tabular">13 / 13</div>
           </div>
         </div>
       </Reveal>

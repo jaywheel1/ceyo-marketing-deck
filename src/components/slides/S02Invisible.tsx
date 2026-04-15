@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export function S02Invisible() {
   return (
-    <SectionShell id="invisible" eyebrow="So, funny story…" index={2} total={12}>
+    <SectionShell id="invisible" eyebrow="So, funny story…" index={2} total={13}>
       <AuroraBlob className="top-[-100px] right-[-160px]" size={580} color="rgba(245,158,11,0.10)" duration={20} />
       <AuroraBlob className="bottom-[-140px] left-[-100px]" size={520} color="rgba(79,70,229,0.16)" duration={26} />
 

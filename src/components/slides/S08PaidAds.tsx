@@ -80,7 +80,7 @@ function bold(text: string) {
 
 export function S08PaidAds() {
   return (
-    <SectionShell id="paid-ads" eyebrow="Paid ads" index={8} total={12}>
+    <SectionShell id="paid-ads" eyebrow="Paid ads" index={9} total={13}>
       <AuroraBlob className="top-0 right-[-140px]" size={520} color="rgba(79,70,229,0.14)" />
 
       <div className="mb-6">

@@ -29,7 +29,7 @@ const STACK = ["Next.js", "Supabase", "LinkedIn Ads API", "Google Ads API", "G2 
 
 export function S10Workstation() {
   return (
-    <SectionShell id="workstation" eyebrow="The team's workstation" index={10} total={12}>
+    <SectionShell id="workstation" eyebrow="The team's workstation" index={11} total={13}>
       <AuroraBlob className="top-[-100px] right-[-120px]" size={560} />
 
       <div className="mb-6">
