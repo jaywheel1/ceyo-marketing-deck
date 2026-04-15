@@ -13,41 +13,51 @@ const WEEKS = [
     items: [
       "Ship a pop-up inside Ceyo that asks for a review the moment a customer sees their **AI visibility go up** — peak-happiness moment",
       "Add a one-click G2 link to every support, onboarding, and success email — **permanent**, not a one-off campaign",
-      "I personally email Ceyo's **top customers** asking for a 5-minute review with a direct deep-link",
+      "I personally email Ceyo's **top customers** with a 5-minute review ask + direct deep-link",
+      "Set up the same flow on **Capterra**, **GetApp**, and **Product Hunt** — same effort, more surfaces",
     ],
   },
   {
     w: "Week 2",
     items: [
-      "Daily check on submissions. **Personal thank-you reply** to every reviewer within 24 hours",
+      "Daily check on submissions across all platforms. **Personal thank-you reply** to every reviewer within 24 hours",
       "One reminder to non-responders. **No nagging**.",
-      "Track the 4 signals G2 uses to rank fast-growing products: **website traffic, team size, social reach, review velocity**",
+      "**Run a small thank-you incentive** — $25 Amazon gift card per verified review (G2 allows vendor-funded incentives if disclosed). Costs ~$500 to land 20 reviews.",
     ],
   },
   {
     w: "Week 3–4",
     items: [
-      "Hit **20 reviews before April 28** → Ceyo locks the Summer 2026 \"Users Love Us\" badge (the free one)",
-      "Put the 3 strongest reviews on the **homepage**, in **Tom + Maxim's LinkedIn**, and in **ad creative**",
-      "Upgrade to a paid G2 plan ($2,999/year) so the bigger \"Grid\" badges display publicly the moment we earn them",
+      "Hit **20 reviews before April 28** → Ceyo locks the Summer 2026 \"Users Love Us\" badge — **free, no paid plan needed**",
+      "Pull the 3 strongest reviews onto **homepage**, **Tom + Maxim's LinkedIn**, and **ad creative**",
+      "Build a **\"customer love\" page** on ceyo.ai pulling reviews from G2, Capterra, LinkedIn, X, and Reddit — owned social proof, no platform fee",
     ],
   },
   {
     w: "Month 2",
     items: [
-      "Push to **50+ reviews** — the in-product pop-up now runs on autopilot",
-      "Target: **\"High Performer\"** (the tier above Users Love Us)",
-      "G2 automatically copies our reviews to **AWS Marketplace, Microsoft Azure**, and 10 other buyer sites — free extra distribution",
+      "Push to **50+ reviews across all platforms** — the in-product pop-up runs on autopilot",
+      "**Trade strategy:** when a customer leaves us a review, offer to leave one on their tool (only if Ceyo genuinely uses it). Tit-for-tat, no paid relationship.",
+      "Start collecting **video testimonials** through Remotion-rendered customer story clips for LinkedIn",
     ],
   },
   {
     w: "Month 3",
     items: [
-      "**75+ reviews**, Ceyo's growth signals all firing",
-      "Target: **\"Leader\" or \"Momentum Leader\"** in the Fall 2026 report",
-      "Review collection becomes a permanent motion — **4 new reviews per week, every week**",
+      "**75+ reviews across all surfaces**, all firing organically",
+      "Apply for **G2 \"Momentum Leader\"** — granted on growth signals (review velocity, social, employee count), no paid plan needed",
+      "**Quarterly review-velocity target:** 4 new reviews per week minimum, every week — permanent motion",
     ],
   },
+];
+
+const PLATFORMS = [
+  { n: "G2", note: "Where buyers compare. Free \"Users Love Us\" badge at 20 reviews." },
+  { n: "Capterra / GetApp / Software Advice", note: "Gartner-owned. Same review can syndicate across all three." },
+  { n: "Product Hunt", note: "Launch + ongoing presence. Reviews drive ranking." },
+  { n: "TrustRadius", note: "Enterprise-leaning buyers. Slower to fill but high trust." },
+  { n: "LinkedIn recommendations", note: "Founders ask happy customers for direct LinkedIn recs. Public, free, high signal." },
+  { n: "Reddit / X mentions", note: "We monitor + amplify organic mentions. Screenshot, post, repeat." },
 ];
 
 function bold(text: string) {
@@ -68,19 +78,19 @@ export function S04G2() {
         <div>
           <SplitReveal
             as="h2"
-            text="G2 to Leader in one quarterly cycle."
+            text="Reviews everywhere buyers look — without paying G2."
             className="text-display-md text-ceyo-heading mb-6"
           />
 
           <Explainer>
-            <strong className="text-ceyo-heading">G2 is the biggest software review site</strong> — where B2B buyers check before buying.
-            Most Ceyo trials will arrive via the free tool, then convert. <strong className="text-ceyo-heading">Inside the product</strong>, we ask them for a G2 review the moment they see real value.
-            Ceyo has <strong className="text-ceyo-danger">zero reviews</strong> today. Profound has a Leader badge. We close that gap in 90 days.
+            <strong className="text-ceyo-heading">G2 is the biggest software review site</strong>, but it&apos;s not the only one. Buyers also check <strong className="text-ceyo-heading">Capterra, Product Hunt, LinkedIn recommendations, and Reddit</strong>.
+            We collect reviews <strong className="text-ceyo-heading">across all of them</strong> at once — same in-product pop-up, multiple destinations.
+            G2&apos;s free <strong className="text-ceyo-heading">&quot;Users Love Us&quot; badge</strong> covers our biggest credibility gap without needing the $2,999/year plan.
           </Explainer>
 
           <Reveal delay={0.3}>
             <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
-              How: Reputation.com ran a <strong className="text-ceyo-heading">pop-up inside their product</strong> asking for reviews. Just that.
+              How: <strong className="text-ceyo-heading">Reputation.com</strong> ran a pop-up inside their product asking for reviews. Just that.
             </p>
           </Reveal>
 
@@ -103,22 +113,17 @@ export function S04G2() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.6}>
-            <div className="card-quiet p-4 flex items-center justify-between">
-              <div>
-                <div className="eyebrow text-ceyo-muted">Ceyo today</div>
-                <div className="text-2xl font-semibold text-ceyo-heading tabular">0 reviews</div>
-              </div>
-              <div className="h-10 w-px bg-ceyo-border" />
-              <div>
-                <div className="eyebrow text-ceyo-muted">Next G2 deadline</div>
-                <div className="text-2xl font-semibold text-ceyo-danger tabular">Apr 28</div>
-              </div>
-              <div className="h-10 w-px bg-ceyo-border" />
-              <div>
-                <div className="eyebrow text-ceyo-muted">First badge at</div>
-                <div className="text-2xl font-semibold text-ceyo-accent3 tabular">20 reviews</div>
-              </div>
+          <Reveal delay={0.55}>
+            <div className="card-quiet p-4">
+              <div className="eyebrow text-ceyo-muted mb-3">6 review surfaces, one collection flow</div>
+              <ul className="space-y-2">
+                {PLATFORMS.map((p) => (
+                  <li key={p.n} className="text-[12.5px] leading-snug flex gap-2">
+                    <span className="text-ceyo-accent mt-1">·</span>
+                    <span><strong className="text-ceyo-heading">{p.n}.</strong> <span className="text-ceyo-muted">{p.note}</span></span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
