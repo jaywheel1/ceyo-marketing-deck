@@ -11,48 +11,57 @@ const WEEKS = [
   {
     w: "Week 1",
     items: [
-      "Ship a pop-up inside Ceyo that asks for a review the moment a customer sees their AI visibility go up — the exact peak-happiness moment",
-      "Add a one-click G2 link to every support email, onboarding email, and success email — permanent, not a one-off campaign",
-      "I personally email Ceyo's top 30 customers asking for a 5-minute review, with a direct deep-link",
+      "Ship a pop-up inside Ceyo that asks for a review the moment a customer sees their **AI visibility go up** — peak-happiness moment",
+      "Add a one-click G2 link to every support, onboarding, and success email — **permanent**, not a one-off campaign",
+      "I personally email Ceyo's **top customers** asking for a 5-minute review with a direct deep-link",
     ],
   },
   {
     w: "Week 2",
     items: [
-      "Daily check on submissions. Personal thank-you reply to every reviewer within 24 hours",
-      "One reminder to non-responders. No follow-up nagging",
-      "Track the 4 signals G2 uses to rank fast-growing products: website traffic, team size, social reach, review velocity",
+      "Daily check on submissions. **Personal thank-you reply** to every reviewer within 24 hours",
+      "One reminder to non-responders. **No nagging**.",
+      "Track the 4 signals G2 uses to rank fast-growing products: **website traffic, team size, social reach, review velocity**",
     ],
   },
   {
     w: "Week 3–4",
     items: [
-      "Hit 20 reviews before April 28 → Ceyo locks the Summer 2026 \"Users Love Us\" badge (the free one)",
-      "Put the 3 strongest reviews on the homepage, in Tom + Maxim's LinkedIn, and in ad creative",
+      "Hit **20 reviews before April 28** → Ceyo locks the Summer 2026 \"Users Love Us\" badge (the free one)",
+      "Put the 3 strongest reviews on the **homepage**, in **Tom + Maxim's LinkedIn**, and in **ad creative**",
       "Upgrade to a paid G2 plan ($2,999/year) so the bigger \"Grid\" badges display publicly the moment we earn them",
     ],
   },
   {
     w: "Month 2",
     items: [
-      "Push to 50+ reviews — the in-product pop-up now runs on autopilot",
-      "Target: \"High Performer\" (the tier above Users Love Us)",
-      "G2 automatically copies our reviews to AWS Marketplace, Microsoft Azure, and 10 other buyer sites — free extra distribution",
+      "Push to **50+ reviews** — the in-product pop-up now runs on autopilot",
+      "Target: **\"High Performer\"** (the tier above Users Love Us)",
+      "G2 automatically copies our reviews to **AWS Marketplace, Microsoft Azure**, and 10 other buyer sites — free extra distribution",
     ],
   },
   {
     w: "Month 3",
     items: [
-      "75+ reviews, Ceyo's growth signals all firing",
-      "Target: \"Leader\" or \"Momentum Leader\" in the Fall 2026 report",
-      "Review collection becomes a permanent motion — 4 new reviews per week, every week",
+      "**75+ reviews**, Ceyo's growth signals all firing",
+      "Target: **\"Leader\" or \"Momentum Leader\"** in the Fall 2026 report",
+      "Review collection becomes a permanent motion — **4 new reviews per week, every week**",
     ],
   },
 ];
 
-export function S02G2() {
+function bold(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} className="text-ceyo-heading">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
+export function S04G2() {
   return (
-    <SectionShell id="g2" eyebrow="The review play" index={2} total={10}>
+    <SectionShell id="g2" eyebrow="The review play" index={4} total={12}>
       <AuroraBlob className="top-20 right-[-200px]" size={500} />
 
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
@@ -64,14 +73,14 @@ export function S02G2() {
           />
 
           <Explainer>
-            G2 is the biggest software review site — it&apos;s where B2B buyers check before buying.
-            Ceyo has <span className="text-ceyo-danger font-semibold">zero reviews</span> today. Profound has a Leader badge.
-            We close that gap in 90 days.
+            <strong className="text-ceyo-heading">G2 is the biggest software review site</strong> — where B2B buyers check before buying.
+            Most Ceyo trials will arrive via the free tool, then convert. <strong className="text-ceyo-heading">Inside the product</strong>, we ask them for a G2 review the moment they see real value.
+            Ceyo has <strong className="text-ceyo-danger">zero reviews</strong> today. Profound has a Leader badge. We close that gap in 90 days.
           </Explainer>
 
           <Reveal delay={0.3}>
             <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
-              How to do it: Reputation.com ran a pop-up inside their product asking for reviews. Just that.
+              How: Reputation.com ran a <strong className="text-ceyo-heading">pop-up inside their product</strong> asking for reviews. Just that.
             </p>
           </Reveal>
 
@@ -132,7 +141,7 @@ export function S02G2() {
                       {w.items.map((it, j) => (
                         <li key={j} className="text-sm text-ceyo-text/90 leading-relaxed flex gap-2">
                           <span className="text-ceyo-muted mt-1">→</span>
-                          <span>{it}</span>
+                          <span>{bold(it)}</span>
                         </li>
                       ))}
                     </ul>

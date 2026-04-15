@@ -8,23 +8,23 @@ import { BorderBeam } from "../primitives/BorderBeam";
 import { Explainer } from "../primitives/Explainer";
 
 const EXECUTION = [
-  { w: "Weeks 1–2", label: "Design + build the free tool", notes: "A single page on ceyo.ai. Someone types in their domain, gets an instant score. No signup. Email unlocks a longer report. Paid unlocks ongoing tracking. I own the copy, design, and landing page." },
-  { w: "Week 3", label: "The \"we failed our own test\" launch", notes: "Run the tool on Ceyo itself first. Publish our (probably failing) score with zero spin. Tom posts the founder angle, Maxim posts the builder angle. I pitch the story to Search Engine Land, Search Engine Journal, TechCrunch." },
-  { w: "Week 4", label: "Make it shareable", notes: "Every scan result generates a branded image — the score, the competitors, the Ceyo logo — one-click to LinkedIn and X. Plus a \"scan a competitor\" button inside every result so one scan leads to five." },
-  { w: "Month 2", label: "Every scan becomes a page on Google", notes: "Each scan creates a permanent page at ceyo.ai/scan/[brand-name]. Hundreds become thousands. Each ranks in Google for \"[brand name] AI visibility\". Plus: I send pre-run scans to 50 target agencies for their top 3 clients." },
-  { w: "Month 3", label: "Category pages", notes: "Second version: ceyo.ai/recommends/best-[category] pages. Each shows who AI recommends in that category today, updated weekly from our data. More indexed pages, more search traffic." },
+  { w: "Weeks 1–2", label: "Design + build the free tool", notes: "A single page on ceyo.ai. Someone types in their domain, gets an instant score in 60 seconds. No signup. Email unlocks the longer report. Paid unlocks ongoing tracking. I own copy, design, and landing page end-to-end." },
+  { w: "Week 3", label: "The \"we failed our own test\" launch", notes: "Run the tool on Ceyo itself first (off the back of the rendering fix). Publish the journey from failing grade to fixed. Tom posts the founder angle, Maxim posts the builder angle. I pitch the story to Search Engine Land, Search Engine Journal, TechCrunch." },
+  { w: "Week 4", label: "Make it shareable", notes: "Every scan result generates a branded image — score, competitors, Ceyo logo — one-click to LinkedIn and X. Plus a \"scan a competitor\" button inside every result so one scan turns into five." },
+  { w: "Month 2", label: "Every scan becomes a Google page", notes: "Each scan creates a permanent page at ceyo.ai/scan/[brand]. Hundreds become thousands. Each ranks in Google for \"[brand] AI visibility\". Plus: I send pre-run scans to target agencies for their flagship clients." },
+  { w: "Month 3", label: "Category pages", notes: "Second surface: ceyo.ai/recommends/best-[category] pages. Each shows who AI recommends in that category today, refreshed weekly. More indexed pages, more search traffic." },
 ];
 
 const LENSES = [
-  { k: "AI visibility score", d: "0–100, based on % of AI answers mentioning the brand", color: "bg-ceyo-accent/20 text-ceyo-accent3 border-ceyo-accent/30" },
-  { k: "AI-readability grade", d: "F to A, whether AI can read the site properly", color: "bg-ceyo-blue/15 text-ceyo-blue border-ceyo-blue/30" },
-  { k: "Head-to-head", d: "Side-by-side against 2 competitors", color: "bg-ceyo-success/15 text-ceyo-success border-ceyo-success/30" },
-  { k: "Sentiment", d: "How AI talks about the brand: positive, neutral, negative", color: "bg-ceyo-warn/15 text-ceyo-warn border-ceyo-warn/30" },
+  { k: "AI visibility score", d: "0–100, the % of AI answers mentioning the brand", color: "bg-ceyo-accent/20 text-ceyo-accent3 border-ceyo-accent/30" },
+  { k: "AI-readability grade", d: "F to A — can AI even read this site?", color: "bg-ceyo-blue/15 text-ceyo-blue border-ceyo-blue/30" },
+  { k: "Head-to-head", d: "Side-by-side vs 2 named competitors", color: "bg-ceyo-success/15 text-ceyo-success border-ceyo-success/30" },
+  { k: "Sentiment", d: "Positive, neutral, or negative — how AI talks about you", color: "bg-ceyo-warn/15 text-ceyo-warn border-ceyo-warn/30" },
 ];
 
 export function S03CeyoScan() {
   return (
-    <SectionShell id="ceyo-scan" eyebrow="The top of funnel" index={3} total={10}>
+    <SectionShell id="ceyo-scan" eyebrow="The top of funnel" index={3} total={12}>
       <AuroraBlob className="top-0 left-[-160px]" size={540} />
 
       <div className="grid lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-16 items-start">
@@ -36,13 +36,13 @@ export function S03CeyoScan() {
           />
 
           <Explainer>
-            A free quality-check tool on Ceyo&apos;s website. Anyone types in their domain and gets a score they can share.
-            They get value, we get traffic and leads. HubSpot built a $30B company on exactly this move.
+            A <strong className="text-ceyo-heading">free quality-check tool</strong> on Ceyo&apos;s site — anyone types in their domain and gets a score they can share.
+            They get value, we get traffic and leads. <strong className="text-ceyo-heading">HubSpot built a $30B company on exactly this move.</strong>
           </Explainer>
 
           <Reveal delay={0.3}>
             <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
-              HubSpot&apos;s Website Grader, launched 2006 — still the clearest example of this working.
+              <strong className="text-ceyo-heading">HubSpot&apos;s Website Grader</strong>, launched 2006 — still the clearest example of this working.
             </p>
           </Reveal>
 
@@ -106,8 +106,8 @@ export function S03CeyoScan() {
           <Reveal delay={0.7}>
             <div className="mt-6 p-4 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
               <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                HubSpot has their own AI grader today — but it&apos;s one-shot, no signup, and doesn&apos;t create pages.
-                Ceyo&apos;s version is better: 4 scores, built for repeat visits, and every scan becomes a Google-findable page.
+                HubSpot has their own AI grader today — but it&apos;s <strong className="text-ceyo-heading">one-shot</strong>, no signup, and doesn&apos;t create permanent pages.
+                Ceyo&apos;s version is structurally better: <strong className="text-ceyo-heading">4 scores</strong>, built for repeat visits, and every scan becomes a <strong className="text-ceyo-heading">Google-findable page</strong>.
               </p>
             </div>
           </Reveal>

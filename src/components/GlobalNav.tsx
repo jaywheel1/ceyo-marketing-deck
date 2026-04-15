@@ -3,14 +3,16 @@ import { useEffect, useState } from "react";
 
 const SECTIONS = [
   { id: "cover", label: "Cover" },
+  { id: "invisible", label: "Site fix" },
+  { id: "ceyo-scan", label: "Free tool" },
   { id: "g2", label: "G2" },
-  { id: "ceyo-scan", label: "Ceyo Scan" },
   { id: "reddit", label: "Reddit" },
   { id: "content", label: "Content" },
-  { id: "prog-seo", label: "Prog SEO" },
-  { id: "paid-pr", label: "Paid + PR" },
-  { id: "dashboard", label: "Dashboard" },
-  { id: "plan", label: "90-Day" },
+  { id: "prog-seo", label: "SEO pages" },
+  { id: "paid-ads", label: "Paid ads" },
+  { id: "pr", label: "PR" },
+  { id: "workstation", label: "Workstation" },
+  { id: "plan", label: "90 days" },
   { id: "close", label: "Close" },
 ];
 
@@ -66,7 +68,6 @@ export function GlobalNav() {
 
   return (
     <>
-      {/* Top bar */}
       <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 pointer-events-none">
         <div className="flex items-center gap-3 pointer-events-auto">
           <div className="h-7 w-7 rounded-md bg-ceyo-accent flex items-center justify-center text-white font-bold text-sm">C</div>
@@ -82,7 +83,6 @@ export function GlobalNav() {
         </div>
       </header>
 
-      {/* Progress bar */}
       <div className="fixed top-0 left-0 right-0 z-40 h-[2px] bg-transparent pointer-events-none">
         <div
           className="h-full bg-gradient-to-r from-ceyo-accent to-ceyo-accent3 transition-all duration-200"
@@ -90,7 +90,6 @@ export function GlobalNav() {
         />
       </div>
 
-      {/* Side nav */}
       <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-2.5">
         {SECTIONS.map((s, i) => (
           <a
@@ -109,7 +108,6 @@ export function GlobalNav() {
         ))}
       </nav>
 
-      {/* Bottom hint */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hidden md:flex items-center gap-3 text-[11px] text-ceyo-muted pointer-events-none">
         <span className="kbd">↑</span>
         <span className="kbd">↓</span>

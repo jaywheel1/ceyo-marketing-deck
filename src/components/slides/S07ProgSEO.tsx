@@ -12,7 +12,7 @@ const PAGE_TYPES = [
   { url: "/alternatives-to-[x]", desc: "Lists where Ceyo is one of several honest options" },
   { url: "/best-[category]-geo-tool", desc: "Category-specific: B2B SaaS, ecommerce, agencies, fintech" },
   { url: "/[industry]-ai-search-playbook", desc: "Industry-specific playbooks with real Ceyo data" },
-  { url: "/scan/[brand]", desc: "Pages auto-created from free-tool usage (links back)" },
+  { url: "/scan/[brand]", desc: "Auto-created from free-tool usage (links back)" },
 ];
 
 const WEEKS = [
@@ -23,9 +23,9 @@ const WEEKS = [
   { w: "Month 3", t: "Refresh loop", n: "500+ pages total. Monthly refresh agent pulls fresh data and updates each page. Page-by-page rank tracking." },
 ];
 
-export function S06ProgSEO() {
+export function S07ProgSEO() {
   return (
-    <SectionShell id="prog-seo" eyebrow="Owned SEO real estate" index={6} total={10}>
+    <SectionShell id="prog-seo" eyebrow="Owned SEO real estate" index={7} total={12}>
       <AuroraBlob className="bottom-[-140px] left-[-100px]" size={500} />
 
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start">
@@ -37,14 +37,14 @@ export function S06ProgSEO() {
           />
 
           <Explainer>
-            Instead of writing blog posts one at a time, we use AI agents to build hundreds of pages automatically —
+            Instead of writing blog posts one at a time, we use <strong className="text-ceyo-heading">AI agents to build hundreds of pages automatically</strong> —
             each one researched individually, each ranking in Google for a different keyword.
-            Most companies that try this make thin spam pages. We use real Ceyo data per page, so ours rank AND help people.
+            Most companies who try this make <strong className="text-ceyo-danger">thin spam pages</strong>. We use real Ceyo data per page, so ours rank <strong className="text-ceyo-heading">AND help people</strong>.
           </Explainer>
 
           <Reveal delay={0.3}>
             <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
-              Stormy AI used this exact method — an AI agent per page, not a template.
+              <strong className="text-ceyo-heading">Stormy AI</strong> used this exact method — an AI agent per page, not a template.
             </p>
           </Reveal>
 
@@ -114,15 +114,6 @@ export function S06ProgSEO() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={0.7}>
-            <div className="mt-6 p-4 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
-              <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                I own the page design, AI agent prompts, voice consistency, and publishing flow.
-                Engineering supports the automation; I run it.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </div>
     </SectionShell>
