@@ -4,6 +4,7 @@ import { SplitReveal } from "../primitives/SplitReveal";
 import { NumberTicker } from "../primitives/NumberTicker";
 import { Reveal } from "../primitives/Reveal";
 import { AuroraBlob } from "../primitives/AuroraBlob";
+import { Explainer } from "../primitives/Explainer";
 
 const SUBS = [
   "r/SEO", "r/bigseo", "r/marketing", "r/b2bmarketing",
@@ -12,10 +13,10 @@ const SUBS = [
 ];
 
 const LOOP = [
-  { time: "7:00am", who: "Agent", what: "Scans 10 target subreddits every 15 minutes overnight. Queues the most relevant threads with 3 draft response options each." },
-  { time: "7:15am", who: "Me", what: "Review queue. Pick best drafts. Voice-match. Ship from the right identity. 3 substantive comments shipped before 9am." },
-  { time: "Afternoon", who: "Me", what: "2 more original posts or comments in response to fresh threads. Every comment 300+ words, every comment contains real Ceyo probe data." },
-  { time: "Friday", who: "Me", what: "Audit: which comments got upvoted, which threads got cited back in Perplexity (we run the probe to verify)." },
+  { time: "7:00am", who: "AI assistant", what: "Scans 10 target subreddits overnight every 15 minutes. Picks the most relevant threads and writes 3 draft reply options for each." },
+  { time: "7:15am", who: "Me", what: "Review the queue. Pick the best reply, edit, post it from the right Ceyo account. 3 real helpful comments up before 9am." },
+  { time: "Afternoon", who: "Me", what: "2 more comments or posts on fresh threads. Every comment 300+ words, every comment shares real Ceyo data, zero pitching." },
+  { time: "Friday", who: "Me", what: "Weekly audit: which comments got upvoted, which threads AI chatbots cited back to Ceyo (we run our own tool to check)." },
 ];
 
 export function S04Reddit() {
@@ -23,18 +24,19 @@ export function S04Reddit() {
     <SectionShell id="reddit" eyebrow="The citation channel" index={4} total={10}>
       <AuroraBlob className="bottom-[-100px] right-[-160px]" size={560} color="rgba(99,102,241,0.14)" />
 
-      <div className="mb-14">
+      <div className="mb-6">
         <SplitReveal
           as="h2"
           text="Reddit is the 24-hour Perplexity citation loop."
           className="text-display-md text-ceyo-heading max-w-5xl"
         />
-        <Reveal delay={0.3}>
-          <p className="text-lg text-ceyo-text/80 mt-6 max-w-3xl leading-relaxed">
-            No B2B GEO platform is working it. I would.
-          </p>
-        </Reveal>
       </div>
+
+      <Explainer>
+        AI chatbots like ChatGPT and Perplexity pull their answers from Reddit more than any other website.
+        If we&apos;re helpful in Reddit conversations about AI search, those comments show up in AI answers within a day.
+        No other GEO tool is working Reddit seriously. Fastest visibility channel we have.
+      </Explainer>
 
       <div className="grid lg:grid-cols-3 gap-4 mb-10">
         <Reveal delay={0.2}>
@@ -44,31 +46,31 @@ export function S04Reddit() {
               <NumberTicker value={46.7} decimals={1} suffix="%" />
             </div>
             <div className="text-sm text-ceyo-muted leading-relaxed">
-              of its citations come from Reddit. Higher than any other source on the internet.
+              of its answers come from Reddit. Higher than any other website on the internet.
             </div>
             <div className="mt-4 pt-3 border-t border-ceyo-borderSoft text-[11px] text-ceyo-muted/80">Source: Otterly.AI, 2026</div>
           </div>
         </Reveal>
         <Reveal delay={0.3}>
           <div className="card p-6 h-full">
-            <div className="eyebrow text-ceyo-accent3 mb-3">All AI answers</div>
+            <div className="eyebrow text-ceyo-accent3 mb-3">All AI chatbots</div>
             <div className="text-5xl font-semibold text-ceyo-heading tabular mb-2">
               <NumberTicker value={68} suffix="%" />
             </div>
             <div className="text-sm text-ceyo-muted leading-relaxed">
-              of AI responses across ChatGPT, Gemini, Perplexity, Claude cite Reddit threads.
+              of answers from ChatGPT, Gemini, Perplexity and Claude cite Reddit threads as a source.
             </div>
-            <div className="mt-4 pt-3 border-t border-ceyo-borderSoft text-[11px] text-ceyo-muted/80">Source: cross-engine citation analysis, 2026</div>
+            <div className="mt-4 pt-3 border-t border-ceyo-borderSoft text-[11px] text-ceyo-muted/80">Source: cross-platform citation analysis, 2026</div>
           </div>
         </Reveal>
         <Reveal delay={0.4}>
           <div className="card p-6 h-full">
-            <div className="eyebrow text-ceyo-accent3 mb-3">Time to citation</div>
+            <div className="eyebrow text-ceyo-accent3 mb-3">Speed to AI answer</div>
             <div className="text-5xl font-semibold text-ceyo-heading tabular mb-2">
               <NumberTicker value={24} suffix=" hrs" />
             </div>
             <div className="text-sm text-ceyo-muted leading-relaxed">
-              from posting a Reddit comment to appearing in a Perplexity answer. Fastest channel in GEO.
+              from posting a Reddit comment to seeing it appear in a Perplexity answer. Nothing else is this fast.
             </div>
             <div className="mt-4 pt-3 border-t border-ceyo-borderSoft text-[11px] text-ceyo-muted/80">Source: AuthorityTech benchmark</div>
           </div>
@@ -77,7 +79,7 @@ export function S04Reddit() {
 
       <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10">
         <div>
-          <div className="eyebrow text-ceyo-accent3 mb-4">Target subreddits</div>
+          <div className="eyebrow text-ceyo-accent3 mb-4">10 subreddits where Ceyo&apos;s buyers hang out</div>
           <div className="flex flex-wrap gap-2">
             {SUBS.map((s, i) => (
               <Reveal key={s} delay={0.1 + i * 0.03}>
@@ -91,17 +93,17 @@ export function S04Reddit() {
 
           <Reveal delay={0.5}>
             <div className="mt-6 card p-4">
-              <div className="eyebrow text-ceyo-muted mb-2">Identities</div>
+              <div className="eyebrow text-ceyo-muted mb-2">Real accounts, not bots</div>
               <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                3 authentic accounts (me + 2 Ceyo people), real post histories, no burners.
-                I own voice and what ships. No founder approval on individual comments.
+                3 genuine Ceyo accounts (me and 2 others), each with real posting histories. Nothing fake.
+                I own what gets posted — no founder sign-off on individual comments, I move fast when a thread appears.
               </p>
             </div>
           </Reveal>
         </div>
 
         <div>
-          <div className="eyebrow text-ceyo-accent3 mb-4">Daily loop</div>
+          <div className="eyebrow text-ceyo-accent3 mb-4">My daily Reddit routine</div>
           <div className="space-y-3">
             {LOOP.map((l, i) => (
               <Reveal key={l.time} delay={0.15 + i * 0.08}>

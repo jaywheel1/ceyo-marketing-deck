@@ -5,20 +5,21 @@ import { NumberTicker } from "../primitives/NumberTicker";
 import { Reveal } from "../primitives/Reveal";
 import { AuroraBlob } from "../primitives/AuroraBlob";
 import { BorderBeam } from "../primitives/BorderBeam";
+import { Explainer } from "../primitives/Explainer";
 
 const EXECUTION = [
-  { w: "Weeks 1–2", label: "Spec + build v1", notes: "One-page tool: domain → Share of Answer score + crawlability grade + competitor comparison. No login. Email unlocks full audit. I write copy + design end-to-end." },
-  { w: "Week 3", label: "The \"we failed our own test\" launch", notes: "Run the tool on Ceyo itself first. Publish the (probably failing) crawlability grade with zero spin. Tom posts the owner angle, Maxim posts the builder angle. I pitch SEL + SEJ + TechCrunch." },
-  { w: "Week 4", label: "Viral mechanics", notes: "Share card shipped: every result generates a branded image (score, competitors, logo). One-click to LinkedIn and X. \"Scan a competitor\" CTA inside every result." },
-  { w: "Month 2", label: "Public pages at scale", notes: "Permanent pages at ceyo.ai/scan/[brand]. Hundreds become thousands. Each ranks in Google for \"[brand] AI visibility\". Outreach to 50 agencies with pre-run scans of their top 3 clients." },
-  { w: "Month 3", label: "Category pages", notes: "Second surface: ceyo.ai/recommends/best-[category]. Lives from real probe data, updated weekly. Programmatic SEO at scale, backed by honest numbers." },
+  { w: "Weeks 1–2", label: "Design + build the free tool", notes: "A single page on ceyo.ai. Someone types in their domain, gets an instant score. No signup. Email unlocks a longer report. Paid unlocks ongoing tracking. I own the copy, design, and landing page." },
+  { w: "Week 3", label: "The \"we failed our own test\" launch", notes: "Run the tool on Ceyo itself first. Publish our (probably failing) score with zero spin. Tom posts the founder angle, Maxim posts the builder angle. I pitch the story to Search Engine Land, Search Engine Journal, TechCrunch." },
+  { w: "Week 4", label: "Make it shareable", notes: "Every scan result generates a branded image — the score, the competitors, the Ceyo logo — one-click to LinkedIn and X. Plus a \"scan a competitor\" button inside every result so one scan leads to five." },
+  { w: "Month 2", label: "Every scan becomes a page on Google", notes: "Each scan creates a permanent page at ceyo.ai/scan/[brand-name]. Hundreds become thousands. Each ranks in Google for \"[brand name] AI visibility\". Plus: I send pre-run scans to 50 target agencies for their top 3 clients." },
+  { w: "Month 3", label: "Category pages", notes: "Second version: ceyo.ai/recommends/best-[category] pages. Each shows who AI recommends in that category today, updated weekly from our data. More indexed pages, more search traffic." },
 ];
 
 const LENSES = [
-  { k: "Share of Answer", d: "% of AI responses mentioning the brand, 0–100", color: "bg-ceyo-accent/20 text-ceyo-accent3 border-ceyo-accent/30" },
-  { k: "Crawlability", d: "Grade F–A for AI crawler accessibility", color: "bg-ceyo-blue/15 text-ceyo-blue border-ceyo-blue/30" },
-  { k: "Competitor vs", d: "Head-to-head against 2 named rivals", color: "bg-ceyo-success/15 text-ceyo-success border-ceyo-success/30" },
-  { k: "Sentiment", d: "Positive / neutral / negative read per engine", color: "bg-ceyo-warn/15 text-ceyo-warn border-ceyo-warn/30" },
+  { k: "AI visibility score", d: "0–100, based on % of AI answers mentioning the brand", color: "bg-ceyo-accent/20 text-ceyo-accent3 border-ceyo-accent/30" },
+  { k: "AI-readability grade", d: "F to A, whether AI can read the site properly", color: "bg-ceyo-blue/15 text-ceyo-blue border-ceyo-blue/30" },
+  { k: "Head-to-head", d: "Side-by-side against 2 competitors", color: "bg-ceyo-success/15 text-ceyo-success border-ceyo-success/30" },
+  { k: "Sentiment", d: "How AI talks about the brand: positive, neutral, negative", color: "bg-ceyo-warn/15 text-ceyo-warn border-ceyo-warn/30" },
 ];
 
 export function S03CeyoScan() {
@@ -30,13 +31,18 @@ export function S03CeyoScan() {
         <div>
           <SplitReveal
             as="h2"
-            text="A free tool marketers actually want to share."
-            className="text-display-md text-ceyo-heading mb-8"
+            text="A free tool that becomes how people find Ceyo."
+            className="text-display-md text-ceyo-heading mb-6"
           />
 
+          <Explainer>
+            A free quality-check tool on Ceyo&apos;s website. Anyone types in their domain and gets a score they can share.
+            They get value, we get traffic and leads. HubSpot built a $30B company on exactly this move.
+          </Explainer>
+
           <Reveal delay={0.3}>
-            <p className="text-lg text-ceyo-text/85 leading-relaxed mb-6">
-              HubSpot launched Website Grader in 2006.
+            <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
+              HubSpot&apos;s Website Grader, launched 2006 — still the clearest example of this working.
             </p>
           </Reveal>
 
@@ -49,25 +55,25 @@ export function S03CeyoScan() {
                   <div className="text-4xl sm:text-5xl font-semibold text-ceyo-heading tabular">
                     <NumberTicker value={4} suffix="M" />
                   </div>
-                  <div className="text-xs text-ceyo-muted mt-1">websites graded</div>
+                  <div className="text-xs text-ceyo-muted mt-1">websites scanned</div>
                 </div>
                 <div>
                   <div className="text-4xl sm:text-5xl font-semibold text-ceyo-heading tabular">
                     <NumberTicker value={40} suffix="K" />
                   </div>
-                  <div className="text-xs text-ceyo-muted mt-1">organic backlinks earned</div>
+                  <div className="text-xs text-ceyo-muted mt-1">free backlinks earned</div>
                 </div>
               </div>
               <div className="mt-5 pt-4 border-t border-ceyo-borderSoft text-[13px] text-ceyo-text/80 italic">
-                Arguably the single growth asset that took HubSpot from startup to $30B+ public company.
+                Arguably the single marketing asset that took HubSpot from startup to $30B+ public company.
               </div>
-              <div className="mt-3 text-[11px] text-ceyo-muted/80">Source: HubSpot case studies</div>
+              <div className="mt-3 text-[11px] text-ceyo-muted/80">Source: HubSpot public case studies</div>
             </div>
           </Reveal>
 
           <Reveal delay={0.55}>
             <div className="card-quiet p-5">
-              <div className="eyebrow text-ceyo-muted mb-3">Ceyo Scan · Four lenses, one URL</div>
+              <div className="eyebrow text-ceyo-muted mb-3">Ceyo Scan · What you get in 60 seconds</div>
               <div className="grid grid-cols-2 gap-2">
                 {LENSES.map((l) => (
                   <div key={l.k} className={`rounded-lg px-3 py-2.5 border ${l.color}`}>
@@ -100,8 +106,8 @@ export function S03CeyoScan() {
           <Reveal delay={0.7}>
             <div className="mt-6 p-4 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
               <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                HubSpot has an AEO Grader today — one-shot, no public pages. Ceyo&apos;s is structurally better:
-                multi-lens, persistent, and creates thousands of indexable pages.
+                HubSpot has their own AI grader today — but it&apos;s one-shot, no signup, and doesn&apos;t create pages.
+                Ceyo&apos;s version is better: 4 scores, built for repeat visits, and every scan becomes a Google-findable page.
               </p>
             </div>
           </Reveal>

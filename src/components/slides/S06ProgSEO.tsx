@@ -5,39 +5,46 @@ import { NumberTicker } from "../primitives/NumberTicker";
 import { Reveal } from "../primitives/Reveal";
 import { AuroraBlob } from "../primitives/AuroraBlob";
 import { BorderBeam } from "../primitives/BorderBeam";
+import { Explainer } from "../primitives/Explainer";
 
 const PAGE_TYPES = [
   { url: "/vs/[competitor]", desc: "Head-to-head vs Profound, Peec, AthenaHQ, Otterly, Semrush, Ahrefs" },
-  { url: "/alternatives-to-[x]", desc: "Ranked lists where Ceyo is one of several honest options" },
+  { url: "/alternatives-to-[x]", desc: "Lists where Ceyo is one of several honest options" },
   { url: "/best-[category]-geo-tool", desc: "Category-specific: B2B SaaS, ecommerce, agencies, fintech" },
-  { url: "/[industry]-ai-search-playbook", desc: "Industry-specific playbooks with real probe data" },
-  { url: "/scan/[brand]", desc: "Public pages driven by free-tool usage, feeds back here" },
+  { url: "/[industry]-ai-search-playbook", desc: "Industry-specific playbooks with real Ceyo data" },
+  { url: "/scan/[brand]", desc: "Pages auto-created from free-tool usage (links back)" },
 ];
 
 const WEEKS = [
-  { w: "Week 1–2", t: "Architecture", n: "Define 5 page types. Each gets its own Claude Code agent that researches per-URL — not template substitution." },
-  { w: "Week 3", t: "Agent generation", n: "Per-URL agent pulls real citation probe data, writes unique copy, voice-matches. Published through blog CMS." },
-  { w: "Week 4", t: "Publication ramp", n: "20 pages per week minimum. Internal links, FAQ schema, comparison tables. Each backed by real Ceyo data." },
-  { w: "Month 2", t: "Scale", n: "200+ pages live. Schema.org JSON-LD on each. Every page links to Ceyo Scan for the brand/category mentioned." },
-  { w: "Month 3", t: "Refresh loop", n: "500+ pages. Monthly refresh agent re-pulls live data. Page-level ranking monitoring for Google + AI citations." },
+  { w: "Week 1–2", t: "Design page architecture", n: "Define the 5 page types. Each gets its own AI agent that researches per-page — not one template filled in with different names." },
+  { w: "Week 3", t: "Agents generate pages", n: "Each AI agent pulls real data from Ceyo's tools, writes unique copy in Ceyo's voice, publishes through the blog. Proper research, not template-swap." },
+  { w: "Week 4", t: "Publishing cadence", n: "20 new pages per week minimum. Each has internal links, FAQ sections, comparison tables, real data. Not thin content." },
+  { w: "Month 2", t: "Scale", n: "200+ pages live. Structured data on each so Google and AI understand them properly. Every page links to Ceyo Scan for the brand or category mentioned." },
+  { w: "Month 3", t: "Refresh loop", n: "500+ pages total. Monthly refresh agent pulls fresh data and updates each page. Page-by-page rank tracking." },
 ];
 
 export function S06ProgSEO() {
   return (
-    <SectionShell id="prog-seo" eyebrow="Owned real estate" index={6} total={10}>
+    <SectionShell id="prog-seo" eyebrow="Owned SEO real estate" index={6} total={10}>
       <AuroraBlob className="bottom-[-140px] left-[-100px]" size={500} />
 
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start">
         <div>
           <SplitReveal
             as="h2"
-            text="Programmatic SEO with real research agents per URL."
-            className="text-display-md text-ceyo-heading mb-8"
+            text="Hundreds of Google pages, each one actually useful."
+            className="text-display-md text-ceyo-heading mb-6"
           />
 
+          <Explainer>
+            Instead of writing blog posts one at a time, we use AI agents to build hundreds of pages automatically —
+            each one researched individually, each ranking in Google for a different keyword.
+            Most companies that try this make thin spam pages. We use real Ceyo data per page, so ours rank AND help people.
+          </Explainer>
+
           <Reveal delay={0.3}>
-            <p className="text-lg text-ceyo-text/85 leading-relaxed mb-6">
-              Stormy AI used Claude Code with a research agent per URL — not template substitution.
+            <p className="text-base text-ceyo-text/85 leading-relaxed mb-6">
+              Stormy AI used this exact method — an AI agent per page, not a template.
             </p>
           </Reveal>
 
@@ -56,13 +63,13 @@ export function S06ProgSEO() {
                   <div className="tabular text-ceyo-accent3 text-2xl font-semibold">
                     +<NumberTicker value={23} suffix="%" />
                   </div>
-                  <div className="text-xs text-ceyo-muted">conversion lift</div>
+                  <div className="text-xs text-ceyo-muted">more signups per visitor</div>
                 </div>
                 <div>
                   <div className="tabular text-ceyo-accent3 text-2xl font-semibold">
                     −<NumberTicker value={45} suffix="%" />
                   </div>
-                  <div className="text-xs text-ceyo-muted">cheaper acquisition</div>
+                  <div className="text-xs text-ceyo-muted">cheaper per new signup</div>
                 </div>
               </div>
               <div className="mt-4 pt-3 border-t border-ceyo-borderSoft text-[11px] text-ceyo-muted/80">Source: Stormy AI / Omnius programmatic SEO case study</div>
@@ -71,7 +78,7 @@ export function S06ProgSEO() {
 
           <Reveal delay={0.55}>
             <div className="card-quiet p-4">
-              <div className="eyebrow text-ceyo-muted mb-3">Page architecture</div>
+              <div className="eyebrow text-ceyo-muted mb-3">5 types of pages we&apos;d build</div>
               <div className="space-y-2">
                 {PAGE_TYPES.map((p) => (
                   <div key={p.url} className="flex items-start gap-3">
@@ -111,7 +118,8 @@ export function S06ProgSEO() {
           <Reveal delay={0.7}>
             <div className="mt-6 p-4 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
               <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                I own the architecture, agent prompts, voice, CMS publishing, internal linking strategy. Engineering supports the orchestration infrastructure.
+                I own the page design, AI agent prompts, voice consistency, and publishing flow.
+                Engineering supports the automation; I run it.
               </p>
             </div>
           </Reveal>

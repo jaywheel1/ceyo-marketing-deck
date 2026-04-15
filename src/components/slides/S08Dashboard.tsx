@@ -3,21 +3,22 @@ import { SectionShell } from "../SectionShell";
 import { SplitReveal } from "../primitives/SplitReveal";
 import { Reveal } from "../primitives/Reveal";
 import { AuroraBlob } from "../primitives/AuroraBlob";
+import { Explainer } from "../primitives/Explainer";
 import { motion } from "framer-motion";
 
 const PANELS = [
-  { k: "Share of Answer", v: "Live", c: "Ceyo vs Profound, Peec, AthenaHQ on 5 prompt clusters. Daily delta." },
-  { k: "Content Queue", v: "Kanban", c: "Every draft: brief → draft → voice-checked → scheduled → live." },
-  { k: "Agent Activity", v: "24h feed", c: "Per agent: probes run, drafts made, alerts fired, errors." },
-  { k: "G2 Tracker", v: "Reviews + rank", c: "Count, rank, competitor deltas, badge status, deadline countdown." },
-  { k: "Reddit", v: "Threads + citations", c: "Threads monitored, comments shipped, Perplexity citations earned back." },
-  { k: "Ad Performance", v: "Live", c: "LinkedIn + Google + Meta. Top/bottom variants, CPC, CTR. Raw numbers." },
-  { k: "Pipeline Signals", v: "Today", c: "Ceyo Scan scans, email captures, signups, trials. Trend arrows." },
-  { k: "Competitor Watch", v: "24h", c: "Profound / Peec / AthenaHQ posts, pricing changes, launches, press." },
-  { k: "Press Log", v: "Active", c: "Pitches out, placements live, journalist relationship heat map." },
+  { k: "AI visibility", v: "Live", c: "Ceyo vs Profound, Peec, AthenaHQ on 5 key prompts. Daily change." },
+  { k: "Content queue", v: "Kanban", c: "Every draft in flight: idea → draft → voice-checked → scheduled → live." },
+  { k: "AI activity", v: "24h feed", c: "What each AI assistant did in the last day — jobs run, drafts made, alerts." },
+  { k: "G2 tracker", v: "Reviews + rank", c: "Review count, rank, competitor delta, badge status, deadline countdown." },
+  { k: "Reddit", v: "Threads + cites", c: "Threads watched, comments shipped, AI answers citing us back." },
+  { k: "Ad performance", v: "Live", c: "LinkedIn + Google + Meta combined. Top and bottom-performing ads." },
+  { k: "Signups today", v: "Today", c: "Free tool scans, email captures, trials, conversions. Up/down arrows." },
+  { k: "Competitor watch", v: "24h", c: "What Profound, Peec, AthenaHQ just posted, launched, priced, or got press for." },
+  { k: "Press log", v: "Active", c: "Pitches out, placements live, every journalist tracked." },
 ];
 
-const STACK = ["Next.js", "Supabase", "MCP", "Remotion", "LinkedIn Ads API", "Google Ads API", "G2 API", "Reddit API"];
+const STACK = ["Next.js", "Supabase", "LinkedIn Ads API", "Google Ads API", "G2 API", "Reddit API", "Remotion"];
 
 export function S08Dashboard() {
   return (
@@ -28,18 +29,18 @@ export function S08Dashboard() {
         <div>
           <SplitReveal
             as="h2"
-            text="One page. Every agent, every channel, every number I act on."
+            text="One page. Everything I need, in one place."
             className="text-display-md text-ceyo-heading mb-6"
           />
-          <Reveal delay={0.35}>
-            <p className="text-lg text-ceyo-text/80 leading-relaxed mb-8">
-              Ships internally week one. I build, I operate, engineering supports.
-            </p>
-          </Reveal>
+
+          <Explainer>
+            A single page I open every morning. Tells me what&apos;s working, what&apos;s broken, what needs attention today.
+            Replaces 10 different dashboards, spreadsheets, and browser tabs. Built in week 1.
+          </Explainer>
 
           <Reveal delay={0.5}>
             <div className="card p-5 mb-5">
-              <div className="eyebrow text-ceyo-accent3 mb-3">Stack</div>
+              <div className="eyebrow text-ceyo-accent3 mb-3">Built with</div>
               <div className="flex flex-wrap gap-1.5">
                 {STACK.map((s) => (
                   <span key={s} className="font-mono text-[11px] bg-ceyo-surface border border-ceyo-border px-2 py-1 rounded text-ceyo-text/90">
@@ -47,15 +48,18 @@ export function S08Dashboard() {
                   </span>
                 ))}
               </div>
+              <p className="text-xs text-ceyo-muted mt-3 leading-relaxed">
+                Standard web stack. Everything talks to everything via APIs. I build and operate it — engineering only helps with the data plumbing.
+              </p>
             </div>
           </Reveal>
 
           <Reveal delay={0.65}>
             <div className="card-quiet p-4">
-              <div className="eyebrow text-ceyo-muted mb-2">Review cadence</div>
+              <div className="eyebrow text-ceyo-muted mb-2">How we stay in sync</div>
               <p className="text-sm text-ceyo-text/90 leading-relaxed">
-                One 10-minute Loom every Friday walking Tom and Maxim through the top 5 changes.
-                Monthly in-person deep dive. Async-default.
+                One 10-minute Loom every Friday walking Tom and Maxim through the top 5 changes of the week.
+                Monthly in-person deep dive. Everything else runs async.
               </p>
             </div>
           </Reveal>
@@ -109,8 +113,8 @@ export function S08Dashboard() {
               </div>
 
               <div className="mt-4 pt-4 border-t border-ceyo-borderSoft flex items-center justify-between text-[10px] font-mono text-ceyo-muted">
-                <span>9 panels · auto-refresh 60s</span>
-                <span className="text-ceyo-accent3">Health 87/100 ●</span>
+                <span>9 panels · auto-refresh every minute</span>
+                <span className="text-ceyo-accent3">Overall health 87/100 ●</span>
               </div>
             </div>
           </div>

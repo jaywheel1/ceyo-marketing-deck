@@ -3,33 +3,34 @@ import { SectionShell } from "../SectionShell";
 import { SplitReveal } from "../primitives/SplitReveal";
 import { Reveal } from "../primitives/Reveal";
 import { AuroraBlob } from "../primitives/AuroraBlob";
+import { Explainer } from "../primitives/Explainer";
 
 const TIERS = [
   {
     name: "Lean",
     range: "$1K–$5K / mo",
-    body: "Zero paid. One freelancer. Content engine, G2 drive, Reddit, Ceyo Scan, organic founder brand all ship. Paid is optional.",
+    body: "Zero ad spend. One freelancer. Content engine, G2 push, Reddit, Ceyo Scan, Tom + Maxim's LinkedIn — all ship. Ads are optional at this level.",
   },
   {
     name: "Mid",
     range: "$5K–$20K / mo",
-    body: "Paid added behind proven organic only. Second freelancer. Analyst program activates. Podcast sponsorships possible.",
+    body: "Ads layered behind content that's already working. Second freelancer. Analyst outreach becomes a program. Podcast sponsorships possible.",
     featured: true,
   },
   {
     name: "Scale",
     range: "$20K+ / mo",
-    body: "Full LinkedIn + Google + retargeting. 3–4 freelancers managed by me. Agency partner program funded. Event presence. Sponsored placements.",
+    body: "Full LinkedIn + Google + retargeting ads. 3–4 freelancers managed by me. Agency partner program funded. Event presence. Podcast + newsletter sponsorships.",
   },
 ];
 
 const OWNED = [
   "All founder + company social content (Tom, Maxim, Ceyo). Headline approvals only.",
-  "All blog, landing page copy, case studies, ad creative, launch bundles.",
-  "Paid channel mix, budget allocation, variant testing.",
+  "All blog posts, landing page copy, case studies, ad creative, launch bundles.",
+  "Ad budget allocation, channel mix, A/B variant testing.",
   "Analyst + PR relationships and placement strategy.",
   "G2 + review site strategy, incentives, badge plan.",
-  "The dashboard — what&apos;s measured, what alerts, what I review weekly.",
+  "The dashboard — what&apos;s measured, what alerts, what we review weekly.",
 ];
 
 export function S10Close() {
@@ -38,13 +39,17 @@ export function S10Close() {
       <AuroraBlob className="top-[-120px] right-[-140px]" size={640} color="rgba(79,70,229,0.2)" duration={20} />
       <AuroraBlob className="bottom-[-180px] left-[-80px]" size={520} color="rgba(99,102,241,0.12)" duration={24} />
 
-      <div className="mb-14">
+      <div className="mb-6">
         <SplitReveal
           as="h2"
           text="Same plan. Different throttle."
           className="text-display-md text-ceyo-heading"
         />
       </div>
+
+      <Explainer>
+        The plan doesn&apos;t change with budget — only how fast it runs. Three investment levels, what each one unlocks, what I own end-to-end, and how we work together.
+      </Explainer>
 
       <div className="grid lg:grid-cols-3 gap-4 mb-16">
         {TIERS.map((t, i) => (
@@ -80,7 +85,7 @@ export function S10Close() {
 
         <Reveal delay={0.75}>
           <div>
-            <div className="eyebrow text-ceyo-accent3 mb-5">What I plug you into</div>
+            <div className="eyebrow text-ceyo-accent3 mb-5">How we work together</div>
             <ul className="space-y-2.5">
               <li className="flex gap-3 items-start">
                 <span className="font-mono text-[11px] text-ceyo-accent3 tabular mt-1.5">01</span>
@@ -88,7 +93,7 @@ export function S10Close() {
               </li>
               <li className="flex gap-3 items-start">
                 <span className="font-mono text-[11px] text-ceyo-accent3 tabular mt-1.5">02</span>
-                <span className="text-sm text-ceyo-text/90 leading-relaxed">Ad-hoc alignment on positioning shifts, big launches, pricing changes.</span>
+                <span className="text-sm text-ceyo-text/90 leading-relaxed">Ad-hoc check-ins when positioning shifts, big launches hit, or pricing changes.</span>
               </li>
               <li className="flex gap-3 items-start">
                 <span className="font-mono text-[11px] text-ceyo-accent3 tabular mt-1.5">03</span>
@@ -96,7 +101,7 @@ export function S10Close() {
               </li>
               <li className="flex gap-3 items-start">
                 <span className="font-mono text-[11px] text-ceyo-accent3 tabular mt-1.5">04</span>
-                <span className="text-sm text-ceyo-text/90 leading-relaxed">Headline approvals on founder posts. I don&apos;t wait for sign-off on drafts — I own the voice.</span>
+                <span className="text-sm text-ceyo-text/90 leading-relaxed">Headline approvals on founder posts. No sign-off on individual drafts — I own the voice.</span>
               </li>
             </ul>
           </div>
