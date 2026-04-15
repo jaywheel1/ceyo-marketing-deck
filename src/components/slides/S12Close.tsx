@@ -8,11 +8,11 @@ import { Explainer } from "../primitives/Explainer";
 const ALLOC = [
   {
     band: "Under $5K / month",
-    body: "Mostly tooling and AI compute. Subscriptions for what powers the agent layer, content stack, citation tracking, and Remotion's render service. No ad spend. Everything organic — Tom + Maxim's voice, Reddit, Ceyo Scan, programmatic SEO, G2.",
+    body: "Mostly tooling and AI compute (agent layer, content stack, citation tracking, Remotion's render service) — plus small ad-testing budgets used the same way as retargeting: only on warm audiences. Boost Tom + Maxim's top organic posts to people who already engaged. Run small Meta retargeting on site visitors. The point isn't reach — it's figuring out which creative wins before spending more.",
   },
   {
     band: "$5K – $20K / month",
-    body: "Adds paid amplification on top of what already works. LinkedIn boosts on proven organic posts, Google brand-defense and competitor-conquest search ads, retargeting on Meta. Sponsored content in 1–2 niche newsletters or podcasts.",
+    body: "Once we know what ads work, scale them. LinkedIn boosts behind every winning founder post. Google brand-defense and competitor-conquest at intent. Meta retargeting at full reach. First sponsored content in 1–2 niche newsletters or podcasts.",
   },
   {
     band: "$20K+ / month",
