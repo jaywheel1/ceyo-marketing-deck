@@ -8,23 +8,27 @@ import { motion } from "framer-motion";
 
 export function S02Invisible() {
   return (
-    <SectionShell id="invisible" eyebrow="The foundational fix" index={2} total={12}>
-      <AuroraBlob className="top-[-100px] right-[-160px]" size={580} color="rgba(239,68,68,0.10)" duration={20} />
+    <SectionShell id="invisible" eyebrow="So, funny story…" index={2} total={12}>
+      <AuroraBlob className="top-[-100px] right-[-160px]" size={580} color="rgba(245,158,11,0.10)" duration={20} />
       <AuroraBlob className="bottom-[-140px] left-[-100px]" size={520} color="rgba(79,70,229,0.16)" duration={26} />
 
       <div className="mb-6">
         <SplitReveal
           as="h2"
-          text="ChatGPT, Perplexity, and Google AI can't read ceyo.ai today."
+          text="I think I found a problem… 👀"
           className="text-display-md text-ceyo-heading max-w-5xl"
         />
       </div>
 
       <Explainer>
-        Ceyo&apos;s website loads through <strong className="text-ceyo-heading">JavaScript</strong> — the page builds itself in the browser after it loads.
-        The <strong className="text-ceyo-heading">bots that ChatGPT, Perplexity, and Google AI use</strong> to read websites don&apos;t run JavaScript.
-        So when they visit ceyo.ai, they see <strong className="text-ceyo-danger">a blank page</strong>.
-        We&apos;re a GEO platform that&apos;s invisible to GEO. <strong className="text-ceyo-heading">First thing I fix.</strong>
+        <p>
+          Quick one to start with. While researching for this deck, I tested whether AI search bots could actually read ceyo.ai —
+          and, well, <strong className="text-ceyo-heading">they can&apos;t</strong>.
+        </p>
+        <p>
+          The site builds itself with <strong className="text-ceyo-heading">JavaScript</strong>, and the crawlers that ChatGPT, Perplexity, and Google AI use to read websites <strong className="text-ceyo-heading">don&apos;t run JavaScript</strong>. So when they visit, they basically see a blank page.
+          A GEO platform that&apos;s invisible to GEO. <strong className="text-ceyo-heading">Easy fix though — week 1.</strong>
+        </p>
       </Explainer>
 
       <div className="grid lg:grid-cols-2 gap-6 mb-10">
@@ -166,9 +170,9 @@ export function S02Invisible() {
       <Reveal delay={1}>
         <div className="p-5 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
           <p className="text-sm text-ceyo-text/90 leading-relaxed">
-            <strong className="text-ceyo-heading">The bonus:</strong> the moment we fix it, we publish a post titled
-            <em className="text-ceyo-accent3"> &quot;We&apos;re a GEO company. Our site failed our own visibility test. Here&apos;s how we fixed it.&quot;</em>
-            That post becomes the <strong className="text-ceyo-heading">launch story</strong> for everything else in this deck — Ceyo Scan, Reddit, content, all of it. The irony writes its own press pickup.
+            <strong className="text-ceyo-heading">Bonus side effect:</strong> the moment we fix it, we publish a self-aware post —
+            <em className="text-ceyo-accent3"> &quot;We&apos;re a GEO company. Our own site failed our visibility test. Here&apos;s how we fixed it.&quot;</em>
+            That story becomes the launch moment for everything else in this deck — <strong className="text-ceyo-heading">Ceyo Scan, Reddit, content, all of it</strong>. The irony does the heavy lifting.
           </p>
         </div>
       </Reveal>
