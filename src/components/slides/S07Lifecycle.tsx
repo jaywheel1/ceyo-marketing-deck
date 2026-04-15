@@ -65,7 +65,7 @@ const LEAD_FORMS = [
 
 export function S07Lifecycle() {
   return (
-    <SectionShell id="lifecycle" eyebrow="From first scan to advocate" index={7} total={13}>
+    <SectionShell id="lifecycle" eyebrow="From first scan to advocate" index={8} total={13}>
       <AuroraBlob className="bottom-[-100px] right-[-160px]" size={540} color="rgba(99,102,241,0.14)" />
 
       <div className="mb-6">
