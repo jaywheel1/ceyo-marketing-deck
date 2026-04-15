@@ -25,7 +25,7 @@ const WEEKS = [
 
 export function S07ProgSEO() {
   return (
-    <SectionShell id="prog-seo" eyebrow="Owned SEO real estate" index={8} total={13}>
+    <SectionShell id="prog-seo" eyebrow="Owned SEO real estate" index={7} total={13}>
       <AuroraBlob className="bottom-[-140px] left-[-100px]" size={500} />
 
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start">

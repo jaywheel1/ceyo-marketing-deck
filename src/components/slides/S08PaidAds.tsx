@@ -93,11 +93,11 @@ export function S08PaidAds() {
 
       <Explainer>
         <p>
-          <strong className="text-ceyo-heading">Cold ads are expensive theatre.</strong> You pay the platform to find anyone who&apos;ll click — most won&apos;t buy.
-          Industry benchmark: cold LinkedIn ads convert at <strong className="text-ceyo-heading">under 0.5%</strong> for B2B SaaS.
+          <strong className="text-ceyo-heading">Boosting a post that already worked organically converts 5–6× better than running it cold</strong> — that&apos;s the whole rule.
         </p>
         <p>
-          When you boost a post <strong className="text-ceyo-heading">that already proved real people care</strong> (organic likes, shares, comments), the same ad spend converts at <strong className="text-ceyo-accent3">2.7%+</strong> — five to six times more efficient.
+          Industry benchmark for B2B SaaS: cold LinkedIn ads convert at <strong className="text-ceyo-heading">under 0.5%</strong>. The same dollar behind a post that already earned organic engagement converts at <strong className="text-ceyo-accent3">2.7%+</strong>.
+          Cold ads are theatre. You&apos;re paying the platform to find anyone who&apos;ll click — most won&apos;t buy.
         </p>
         <p className="text-ceyo-text">
           Rule for every platform below: <strong className="text-ceyo-heading">amplify what&apos;s working, never test in cold.</strong>

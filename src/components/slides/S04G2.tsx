@@ -78,7 +78,7 @@ export function S04G2() {
         <div>
           <SplitReveal
             as="h2"
-            text="Reviews everywhere buyers look — without paying G2."
+            text="Reviews everywhere buyers look. Without paying G2's $2,999 plan."
             className="text-display-md text-ceyo-heading mb-6"
           />
 

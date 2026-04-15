@@ -32,8 +32,8 @@ export default function Page() {
         <S04G2 />
         <S05Reddit />
         <S06Content />
-        <S07Lifecycle />
         <S07ProgSEO />
+        <S07Lifecycle />
         <S08PaidAds />
         <S09PR />
         <S10Workstation />
