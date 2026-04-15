@@ -15,19 +15,19 @@ export function S02Invisible() {
       <div className="mb-6">
         <SplitReveal
           as="h2"
-          text="I think I found a problem… 👀"
+          text="So… I think I found a problem."
           className="text-display-md text-ceyo-heading max-w-5xl"
         />
       </div>
 
       <Explainer>
         <p>
-          Quick one to start with. While researching for this deck, I tested whether AI search bots could actually read ceyo.ai —
-          and, well, <strong className="text-ceyo-heading">they can&apos;t</strong>.
+          Awkward one to open with, but bear with me. While I was researching ceyo.ai for this deck, I ran a small test to see what AI bots actually see when they visit the site.
+          Turns out — <strong className="text-ceyo-heading">they kind of see nothing</strong>.
         </p>
         <p>
-          The site builds itself with <strong className="text-ceyo-heading">JavaScript</strong>, and the crawlers that ChatGPT, Perplexity, and Google AI use to read websites <strong className="text-ceyo-heading">don&apos;t run JavaScript</strong>. So when they visit, they basically see a blank page.
-          A GEO platform that&apos;s invisible to GEO. <strong className="text-ceyo-heading">Easy fix though — week 1.</strong>
+          Ceyo&apos;s site builds itself with <strong className="text-ceyo-heading">JavaScript</strong> after the page loads, and the crawlers that ChatGPT, Perplexity, and Google AI use to read websites <strong className="text-ceyo-heading">don&apos;t run JavaScript</strong>. So they hit the page, get a blank container back, and move on.
+          A GEO platform that&apos;s invisible to GEO. The good news: it&apos;s a <strong className="text-ceyo-heading">configuration change, not a rebuild — fixed in week 1.</strong>
         </p>
       </Explainer>
 
@@ -100,38 +100,41 @@ export function S02Invisible() {
         <Reveal delay={0.5}>
           <div className="card p-5 relative overflow-hidden">
             <div className="flex items-center justify-between mb-3">
-              <div className="eyebrow text-ceyo-danger">What AI bots see</div>
-              <span className="font-mono text-[10px] text-ceyo-muted">crawler · no javascript</span>
+              <div className="eyebrow text-ceyo-danger">What AI bots actually see</div>
+              <span className="font-mono text-[10px] text-ceyo-muted">live scan · curl as GPTBot</span>
             </div>
-            <div className="bg-ceyo-paper rounded-lg p-6 min-h-[280px] relative border border-ceyo-borderSoft flex items-center justify-center">
+            <div className="bg-ceyo-paper rounded-lg p-5 min-h-[280px] border border-ceyo-borderSoft font-mono text-[11px] leading-relaxed text-ceyo-text/85 overflow-x-auto">
+              <motion.pre
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="whitespace-pre-wrap"
+              >
+<span className="text-ceyo-muted">&lt;!doctype html&gt;</span>{"\n"}
+<span className="text-ceyo-blue">&lt;html</span> <span className="text-ceyo-accent3">lang</span>=<span className="text-ceyo-success">"en"</span><span className="text-ceyo-blue">&gt;</span>{"\n"}
+{"  "}<span className="text-ceyo-blue">&lt;head&gt;</span>{"\n"}
+{"    "}<span className="text-ceyo-muted">&lt;meta</span> <span className="text-ceyo-accent3">name</span>=<span className="text-ceyo-success">"description"</span>{"\n"}
+{"      "}<span className="text-ceyo-accent3">content</span>=<span className="text-ceyo-success">"Ceyo - Track Your Brand's AI Visibility"</span><span className="text-ceyo-muted">&gt;</span>{"\n"}
+{"    "}<span className="text-ceyo-blue">&lt;title&gt;</span><span className="text-ceyo-text">Ceyo</span><span className="text-ceyo-blue">&lt;/title&gt;</span>{"\n"}
+{"    "}<span className="text-ceyo-muted">&lt;script src="/assets/index.js"&gt;&lt;/script&gt;</span>{"\n"}
+{"  "}<span className="text-ceyo-blue">&lt;/head&gt;</span>{"\n"}
+{"  "}<span className="text-ceyo-blue">&lt;body&gt;</span>{"\n"}
+{"    "}<span className="text-ceyo-danger font-semibold">&lt;div id="root"&gt;&lt;/div&gt;</span>{"\n"}
+{"  "}<span className="text-ceyo-blue">&lt;/body&gt;</span>{"\n"}
+<span className="text-ceyo-blue">&lt;/html&gt;</span>
+              </motion.pre>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-center"
+                transition={{ delay: 1.5 }}
+                className="text-[10.5px] text-ceyo-muted mt-4 italic border-t border-ceyo-borderSoft pt-3"
               >
-                <div className="font-mono text-xs text-ceyo-muted mb-3">&lt;body&gt;</div>
-                <SplitReveal
-                  as="div"
-                  text="Ceyo"
-                  className="text-5xl font-semibold text-ceyo-danger/80 tabular"
-                  delay={0.8}
-                  stagger={0.1}
-                />
-                <div className="font-mono text-xs text-ceyo-muted mt-3">&lt;/body&gt;</div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.5 }}
-                  className="text-[11px] text-ceyo-muted mt-6 italic"
-                >
-                  That&apos;s the entire page.
-                </motion.div>
+                That empty <span className="text-ceyo-danger font-mono">&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</span> is the entire body. The page content gets injected later by JavaScript that bots don&apos;t run.
               </motion.div>
             </div>
-            <div className="mt-3 text-xs text-ceyo-danger/90 font-mono">✗ One word. No content. Nothing to cite.</div>
+            <div className="mt-3 text-xs text-ceyo-danger/90 font-mono">✗ Just a title and meta description. No headlines, no copy, no nothing.</div>
           </div>
         </Reveal>
       </div>
