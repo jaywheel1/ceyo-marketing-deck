@@ -99,9 +99,12 @@ export function S02Invisible() {
 
         <Reveal delay={0.5}>
           <div className="card p-5 relative overflow-hidden">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
               <div className="eyebrow text-ceyo-danger">What AI bots actually see</div>
-              <span className="font-mono text-[10px] text-ceyo-muted">live scan · curl as GPTBot</span>
+              <span className="font-mono text-[10px] text-ceyo-danger flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-ceyo-danger pulse-dot" />
+                THIS IS REAL · pulled from ceyo.ai
+              </span>
             </div>
             <div className="bg-ceyo-paper rounded-lg p-5 min-h-[280px] border border-ceyo-borderSoft font-mono text-[11px] leading-relaxed text-ceyo-text/85 overflow-x-auto">
               <motion.pre
@@ -170,7 +173,19 @@ export function S02Invisible() {
         </div>
       </Reveal>
 
-      <Reveal delay={1}>
+      <Reveal delay={0.95}>
+        <div className="p-5 border-l-2 border-ceyo-warn bg-ceyo-surface/40 rounded-r mb-4">
+          <div className="eyebrow text-ceyo-warn mb-2">Important nuance</div>
+          <p className="text-sm text-ceyo-text/90 leading-relaxed">
+            <strong className="text-ceyo-heading">Yes, Ceyo does get cited in AI answers</strong> — but from what <strong className="text-ceyo-heading">other people</strong> say about Ceyo (Reddit threads, blog posts, third-party comparisons, podcast mentions).
+            What&apos;s missing is what <strong className="text-ceyo-heading">Ceyo says about itself</strong>.
+            Right now, AI is telling buyers what others think Ceyo is — not what Ceyo wants to be known for.
+            <strong className="text-ceyo-heading"> We don&apos;t control our own narrative in AI search until we fix this.</strong>
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={1.05}>
         <div className="p-5 border-l-2 border-ceyo-accent bg-ceyo-surface/40 rounded-r">
           <p className="text-sm text-ceyo-text/90 leading-relaxed">
             <strong className="text-ceyo-heading">Bonus side effect:</strong> the moment we fix it, we publish a self-aware post —
